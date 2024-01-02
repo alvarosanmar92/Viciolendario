@@ -336,6 +336,7 @@ img {
 }
 
 body {
+  overflow-x: hidden;
   font-family: "Montserrat", sans-serif;
   color: #ecf0f1;
 }
