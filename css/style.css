@@ -1,0 +1,339 @@
+.hero {
+  width: 100%;
+  height: 80vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(255, 0, 0, 0.2)), url(/assets/Herobanner2.png);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  color: #fff;
+}
+
+.heroContainer {
+  width: 90%;
+  height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.info h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  color: #ecf0f1;
+}
+
+.info h2 {
+  color: #ecf0f1;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.info p {
+  color: #ecf0f1;
+  font-size: 1.2rem;
+  max-width: 50%;
+}
+
+@media only screen and (max-width: 768px) {
+  html {
+    font-size: 10px;
+  }
+}
+/* Responsive CSS */
+.container {
+  margin: 30px;
+}
+
+.row {
+  margin-left: 5%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.image {
+  background: #fbfcfd;
+  position: relative;
+  flex: 1;
+  max-width: 460px;
+  height: 300px;
+  margin: 20px;
+  overflow: hidden;
+}
+.image img {
+  opacity: 0.8;
+  position: relative;
+  vertical-align: top;
+  transition: 0.6s;
+  transition-property: opacity;
+}
+.image:hover img {
+  opacity: 1;
+}
+.image:hover .details h2 {
+  transform: translateY(-30px);
+}
+.image:hover .details p {
+  opacity: 1;
+  transform: translateY(-40px);
+}
+.image:hover .more {
+  bottom: 0;
+}
+.image .details {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+}
+.image .details h2 {
+  background-color: #828484;
+  text-align: center;
+  font-size: 35px;
+  text-transform: uppercase;
+  font-weight: 300;
+  margin-top: 70px;
+  transition: 0.4s;
+  transition-property: transform;
+}
+.image .details h2 span {
+  font-weight: 900;
+}
+.image .details p {
+  margin: 30px 30px 0 30px;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  background-color: #828484;
+  opacity: 0;
+  transition: 0.6s;
+  transition-property: opacity, transform;
+}
+
+.more {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.8);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  bottom: -60px;
+  transition: 0.6s;
+  transition-property: bottom;
+}
+.more .read-more {
+  color: #000;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.more .read-more span {
+  font-weight: 900;
+}
+.more .icon-links i {
+  color: #000;
+  font-size: 20px;
+}
+.more .icon-links a:not(:last-child) i {
+  margin-right: 20px;
+}
+
+@media (max-width: 1080px) {
+  .row {
+    margin-left: 20%;
+  }
+  .image {
+    flex: 100%;
+    max-width: 480px;
+  }
+}
+@media (max-width: 800px) {
+  .row {
+    margin-left: 0%;
+    padding-right: 10%;
+  }
+  .image .details p {
+    font-size: 16px;
+  }
+  .more .read-more {
+    font-size: 18px;
+  }
+  .more .icon-links a i {
+    font-size: 18px;
+  }
+}
+.descriptionPage {
+  background-color: #e74c3c;
+}
+
+.card-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+.img-display {
+  overflow: hidden;
+}
+
+.img-showcase {
+  display: flex;
+  width: 100%;
+  transition: all 0.5s ease;
+}
+.img-showcase img {
+  min-width: 100%;
+}
+
+.img-select {
+  display: flex;
+}
+
+.img-item {
+  margin: 0.3rem;
+}
+.img-item:nth-child(1) {
+  margin-right: 0;
+}
+.img-item:nth-child(2) {
+  margin-right: 0;
+}
+.img-item:nth-child(3) {
+  margin-right: 0;
+}
+.img-item:hover {
+  opacity: 0.8;
+}
+
+.product-content {
+  padding: 2rem 1rem;
+}
+
+.product-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 3rem;
+  text-transform: capitalize;
+  font-weight: 700;
+  position: relative;
+  color: #12263a;
+  margin: 1rem 0;
+}
+.product-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 80px;
+  background: #12263a;
+}
+
+.product-description p {
+  font-size: 14px;
+  padding: 0.3rem;
+  opacity: 0.8;
+}
+
+.product-link {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 1.5rem;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  background: #256eff;
+  color: #fff;
+  padding: 0 0.3rem;
+  transition: all 0.5s ease;
+}
+.product-link:hover {
+  opacity: 0.9;
+}
+
+.product-detail h2 {
+  text-transform: capitalize;
+  color: #12263a;
+  padding-bottom: 0.6rem;
+}
+.product-detail p {
+  font-size: 1.5rem;
+  padding: 0.3rem;
+  opacity: 0.8;
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+}
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  color: #000;
+  border: 1px solid #000;
+  margin: 0 0.2rem;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 0.8rem;
+  transition: all 0.5s ease;
+}
+.social-links a:hover {
+  background: #000;
+  border-color: transparent;
+  color: #fff;
+}
+
+@media screen and (min-width: 992px) {
+  .card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.5rem;
+  }
+  .card-wrapper {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .product-imgs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .product-content {
+    padding-top: 0;
+  }
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #ecf0f1;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/*# sourceMappingURL=style.css.map */

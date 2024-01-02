@@ -1,0 +1,151 @@
+$color_1: #12263a;
+$color_2: #fff;
+$color_3: #ffc107;
+$color_4: #252525;
+$color_5: #f64749;
+$color_6: #256eff;
+$color_7: #000;
+$border-color_1: transparent;
+
+.descriptionPage{
+    background-color: $color-principal;
+}
+.card-wrapper {
+	max-width: 1100px;
+	margin: 0 auto;
+}
+img {
+	width: 100%;
+	display: block;
+}
+.img-display {
+	overflow: hidden;
+}
+.img-showcase {
+	display: flex;
+	width: 100%;
+	transition: all 0.5s ease;
+	img {
+		min-width: 100%;
+	}
+}
+.img-select {
+	display: flex;
+}
+.img-item {
+	margin: 0.3rem;
+	&:nth-child(1) {
+		margin-right: 0;
+	}
+	&:nth-child(2) {
+		margin-right: 0;
+	}
+	&:nth-child(3) {
+		margin-right: 0;
+	}
+	&:hover {
+		opacity: 0.8;
+	}
+}
+.product-content {
+	padding: 2rem 1rem;
+}
+.product-title {
+    font-family: 'Montserrat',sans-serif;
+	font-size: 3rem;
+	text-transform: capitalize;
+	font-weight: 700;
+	position: relative;
+	color: $color_1;
+	margin: 1rem 0;
+	&::after {
+		content: "";
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		height: 4px;
+		width: 80px;
+		background: #12263a;
+	}
+}
+.product-description{
+    p{
+            font-size: 14px;
+            padding: 0.3rem;
+            opacity: 0.8;
+        }
+    }
+
+.product-link {
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: 400;
+	font-size: 1.5rem;
+	display: inline-block;
+	margin-bottom: 0.5rem;
+	background: #256eff;
+	color: $color_2;
+	padding: 0 0.3rem;
+	transition: all 0.5s ease;
+	&:hover {
+		opacity: 0.9;
+	}
+}
+
+.product-detail {
+	h2 {
+		text-transform: capitalize;
+		color: $color_1;
+		padding-bottom: 0.6rem;
+	}
+	p {
+		font-size: 1.5rem;
+		padding: 0.3rem;
+		opacity: 0.8;
+	}
+}
+
+.social-links {
+	display: flex;
+	align-items: center;
+	a {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 32px;
+		height: 32px;
+		color: $color_7;
+		border: 1px solid #000;
+		margin: 0 0.2rem;
+		border-radius: 50%;
+		text-decoration: none;
+		font-size: 0.8rem;
+		transition: all 0.5s ease;
+		&:hover {
+			background: #000;
+			border-color: $border-color_1;
+			color: $color_2;
+		}
+	}
+}
+@media screen and (min-width: 992px) {
+	.card {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 1.5rem;
+	}
+	.card-wrapper {
+		height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.product-imgs {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	.product-content {
+		padding-top: 0;
+	}
+}

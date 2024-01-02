@@ -1,0 +1,148 @@
+$color_1: #fff;
+$color_2: #000;
+
+/* Responsive CSS */
+.container {
+	margin: 30px;
+}
+.row {
+    margin-left:5%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.image {
+	background: #fbfcfd;
+	position: relative;
+	flex: 1;
+	max-width: 460px;
+	height: 300px;
+	margin: 20px;
+	overflow: hidden;
+	img {
+		opacity: 0.8;
+		position: relative;
+		vertical-align: top;
+		transition: 0.6s;
+		transition-property: opacity;
+	}
+	&:hover {
+		img {
+			opacity: 1;
+		}
+		.details {
+			h2 {
+				transform: translateY(-30px);
+			}
+			p {
+				opacity: 1;
+				transform: translateY(-40px);
+			}
+		}
+		.more {
+			bottom: 0;
+		}
+	}
+	.details {
+		z-index: 1;
+		position: absolute;
+		top: 0;
+		right: 0;
+		color: $color_1;
+		width: 100%;
+		height: 100%;
+		h2 {
+            background-color: #828484;
+			text-align: center;
+			font-size: 35px;
+			text-transform: uppercase;
+			font-weight: 300;
+			margin-top: 70px;
+			transition: 0.4s;
+			transition-property: transform;
+			span {
+				font-weight: 900;
+			}
+		}
+		p {
+			margin: 30px 30px 0 30px;
+			font-size: 18px;
+			font-weight: 600;
+			text-align: center;
+            background-color: #828484;
+			opacity: 0;
+			transition: 0.6s;
+			transition-property: opacity, transform;
+		}
+	}
+}
+.more {
+	position: absolute;
+	background: rgba(255, 255, 255, 0.8);
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 15px;
+	bottom: -60px;
+	transition: 0.6s;
+	transition-property: bottom;
+	.read-more {
+		color: $color_2;
+		text-decoration: none;
+		font-size: 20px;
+		font-weight: 500;
+		text-transform: uppercase;
+		span {
+			font-weight: 900;
+		}
+	}
+	.icon-links {
+		i {
+			color: $color_2;
+			font-size: 20px;
+		}
+		a {
+			&:not(:last-child) {
+				i {
+					margin-right: 20px;
+				}
+			}
+		}
+	}
+}
+@media (max-width: 1080px) {
+    .row{
+margin-left: 20%;
+    }
+	.image {
+        flex: 100%;
+		max-width: 480px;
+	}
+}
+@media (max-width: 800px) {
+    .row{
+        margin-left: 0%;
+        padding-right: 10%;
+    }
+	.image {
+		.details {
+			p {
+				font-size: 16px;
+			}
+		}
+	}
+	.more {
+		.read-more {
+			font-size: 18px;
+		}
+		.icon-links {
+			a {
+				i {
+					font-size: 18px;
+				}
+			}
+		}
+	}
+}
