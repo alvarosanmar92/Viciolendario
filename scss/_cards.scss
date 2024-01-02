@@ -26,6 +26,7 @@ $color_2: #000;
 		vertical-align: top;
 		transition: 0.6s;
 		transition-property: opacity;
+		overflow: hidden;
 	}
 	&:hover {
 		img {
@@ -52,6 +53,7 @@ $color_2: #000;
 		color: $color_1;
 		width: 100%;
 		height: 100%;
+		overflow: hidden;
 		h2 {
             background-color: #828484;
 			text-align: center;
